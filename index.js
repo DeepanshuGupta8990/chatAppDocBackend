@@ -7,6 +7,10 @@ const port = 5000;
 app.use(cors());
 app.use(express.json());
 
+app.get("/",(req,res)=>{
+  res.send("ok")
+})
+
 app.get('/getPdf', async (req, res) => {
     const { url,token } = req.query;
 
